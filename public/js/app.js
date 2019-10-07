@@ -2806,6 +2806,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -49994,6 +49996,8 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(item.message))]),
                 _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.user.name))]),
+                _vm._v(" "),
                 _c("td", [_vm._v("Falló")])
               ])
             }),
@@ -50016,6 +50020,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Destinatario")]),
         _vm._v(" "),
         _c("th", [_vm._v("Mesaje")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Envió")]),
         _vm._v(" "),
         _c("th", [_vm._v("Estado")])
       ])

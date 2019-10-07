@@ -8,6 +8,7 @@
               <th>Asunto</th>
               <th>Destinatario</th>
               <th>Mesaje</th>
+              <th>Envió</th>
               <th>Estado</th>
             </tr>
           </thead>
@@ -16,6 +17,7 @@
               <td>{{item.subject}}</td>
               <td>{{item.addressee}}</td>
               <td>{{item.message}}</td>
+              <td>{{item.user.name}}</td>
               <td>Falló</td>
             </tr>
           </tbody>

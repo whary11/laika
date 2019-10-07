@@ -52,6 +52,6 @@ class EmailController extends Controller
 
     public function getEmails()
     {
-        return Email::all();
+        return Email::with(['user'])->get();
     }
 }
