@@ -330,7 +330,7 @@ export default {
       },
       pagination: { nav: "scroll", chunk: 6 },
       collapseGroups: true,
-      perPage: 20,
+      perPage: 10,
       texts: {
         count:
           "Montrando del {from} al {to} de {count} Registros|{count} Registros|1 rol",
@@ -385,6 +385,10 @@ export default {
         .post("/api/editUser", this.user_edit)
         .then(res => {
           if (res.data.status) {
+            this.$swal.fire({
+              text: "Usuario editado con éxito.",
+              type: "success"
+            });
             $("#edit_user").modal("hide");
 
             this.getUser();

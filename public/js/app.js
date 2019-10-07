@@ -2621,7 +2621,7 @@ __webpack_require__.r(__webpack_exports__);
         chunk: 6
       },
       collapseGroups: true,
-      perPage: 20,
+      perPage: 10,
       texts: {
         count: "Montrando del {from} al {to} de {count} Registros|{count} Registros|1 rol",
         first: "First",
@@ -2671,6 +2671,11 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.post("/api/editUser", this.user_edit).then(function (res) {
         if (res.data.status) {
+          _this2.$swal.fire({
+            text: "Usuario editado con éxito.",
+            type: "success"
+          });
+
           $("#edit_user").modal("hide");
 
           _this2.getUser();
