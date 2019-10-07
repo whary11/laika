@@ -2614,7 +2614,10 @@ __webpack_require__.r(__webpack_exports__);
         document: "Identificacion",
         names: "Nombre",
         surnames: "Apellidos",
-        email: "Email"
+        email: "Email",
+        "municipality.name": "Municipio",
+        "municipality.department.name": "Departamento",
+        "municipality.department.country.name": "País"
       },
       pagination: {
         nav: "scroll",
@@ -2697,7 +2700,11 @@ __webpack_require__.r(__webpack_exports__);
 
             _this3.user = {};
             $("#modal_user").modal("hide");
-            alert("Usuario guardado con éxito");
+
+            _this3.$swal.fire({
+              text: "Usuario guardado con éxito.",
+              type: "success"
+            });
           }
         })["catch"](function (error) {});
       }

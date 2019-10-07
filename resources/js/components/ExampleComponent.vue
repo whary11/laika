@@ -326,7 +326,10 @@ export default {
         document: "Identificacion",
         names: "Nombre",
         surnames: "Apellidos",
-        email: "Email"
+        email: "Email",
+        "municipality.name": "Municipio",
+        "municipality.department.name": "Departamento",
+        "municipality.department.country.name": "País"
       },
       pagination: { nav: "scroll", chunk: 6 },
       collapseGroups: true,
@@ -409,7 +412,10 @@ export default {
               this.getUser();
               this.user = {};
               $("#modal_user").modal("hide");
-              alert("Usuario guardado con éxito");
+              this.$swal.fire({
+                text: "Usuario guardado con éxito.",
+                type: "success"
+              });
             }
           })
           .catch(function(error) {});
