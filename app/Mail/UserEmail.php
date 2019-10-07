@@ -19,7 +19,7 @@ class UserEmail extends Mailable
      */
 
     // protected $email;
-    public function __construct($email)
+    public function __construct()
     {
         // $this->email = $email;
     }

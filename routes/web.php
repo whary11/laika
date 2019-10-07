@@ -12,6 +12,7 @@
 */
 
 use App\Jobs;
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,14 +24,25 @@ Route::get('/emails', function () {
 
 
 Route::get('/state_emails', function () {
-
-    $jobs = Jobs::all(();
-
-    // Jobs
-    return view('state_emails', compact('jobs'));
+    return view('emails.state_emails');
 })->middleware('auth');
 
 
+// Grupo de rutas protegidas por un middleware, para que solo puedan acceder los usuarios autenticados
+Route::group(['middleware' => 'auth', 'prefix' => 'api'], function () {
+    Route::post('queuedEmail', 'EmailController@queuedEmail');
+    Route::get('getUsers', 'UserController@getUsers');
+    Route::get('getCountries', 'CountryController@getCountries');
+    Route::post('saveUser', 'UserController@saveUser');
+    Route::post('editUser', 'UserController@editUser');
+    Route::post('deleteUser', 'UserController@deleteUser');
+    Route::get('getEmails', 'EmailController@getEmails');
+});
+
+
+
+
+Route::get('/view_email', 'Emal@index')->name('home');
 
 
 

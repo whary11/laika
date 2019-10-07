@@ -30,6 +30,7 @@ class EmailController extends Controller
             ]);
             dispatch(new SendEmailJob($email)); //Pasando el email a la cola de ejecusiones
             DB::commit();
+
             $success = true;
         } catch (\Throwable $th) {
             $success = false;
@@ -47,5 +48,10 @@ class EmailController extends Controller
                 'error' => $error
             ];
         }
+    }
+
+    public function getEmails()
+    {
+        return Email::all();
     }
 }

@@ -46,7 +46,9 @@ Vue.use(VueSweetalert2);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('emails', require('./components/Emails.vue').default);
-Vue.component('v-select', vSelect)
+Vue.component('state-emails', require('./components/StateEmails.vue').default);
+
+Vue.component('v-select', vSelect) // state-emails
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

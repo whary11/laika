@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="m-4">
-      <button class="btn btn-dark">Procesar emails</button>
-    </div>
+    <!-- <div class="m-4">
+      <button class="btn btn-dark" @click="stateEmails()">Procesar emails</button>
+    </div>-->
     <div class="card">
       <div class="card-body">
         <form class="row" @submit.prevent="sendEmail()">

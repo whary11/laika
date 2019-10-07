@@ -15,12 +15,10 @@ use Illuminate\Http\Request;
 
 
 
-Route::get('getUsers', 'UserController@getUsers');
-Route::get('getCountries', 'CountryController@getCountries'); //saveUser
-Route::post('saveUser', 'UserController@saveUser'); //saveUser
-Route::post('editUser', 'UserController@editUser'); //saveUser
-Route::post('deleteUser', 'UserController@deleteUser'); //saveUser
-Route::post('queuedEmail', 'EmailController@queuedEmail'); //saveUser
+
+
+
+
 
 
 
