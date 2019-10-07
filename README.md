@@ -4,7 +4,7 @@
 
 2. Ejecutar el comando php artisan migrate:refresh --seed
 
-3. Luego utilisar el usuario:
+3. Luego utilizar el usuario:
 
 Usuario: whary11@gmail.com
 Clave: password
