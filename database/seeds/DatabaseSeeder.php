@@ -24,15 +24,20 @@ class DatabaseSeeder extends Seeder
         $colombia = Country::create([
             'name' => 'Colombia'
         ]);
-        // $mexico = Country::create([
-        //     'name' => 'México'
-        // ]);
+        $mexico = Country::create([
+            'name' => 'México'
+        ]);
 
         // $argentina = Country::create([
         //     'name' => 'México'
         // ]);
 
         //Departamentos
+
+        $chivas = Department::create([
+            'name' => 'Chivas',
+            'country_id' => $mexico->id
+        ]);
 
         $choco = Department::create([
             'name' => 'Chocó',
@@ -56,6 +61,11 @@ class DatabaseSeeder extends Seeder
 
 
         //Municipios
+
+        Municipality::create([
+            'name' => 'Quibaya',
+            'department_id' => $chivas->id
+        ]);
         $bogota = Municipality::create([
             'name' => 'Bogotá',
             'department_id' => $cundinamarca->id
